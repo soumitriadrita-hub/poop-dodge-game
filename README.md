@@ -15,7 +15,6 @@ The game you never knew you needed! Navigate through a poop storm and prove your
    - 💨 Slow Motion (5s slower poop)
    - 💖 Extra Life (+1 heart)
 
-## 🌐 Play Online
-**[CLICK HERE TO PLAY](https://soumitriadrita-hub.github.io/poop-dodge-game/)**
+
 
 *Can you become the ultimate Poop Dodger?*
