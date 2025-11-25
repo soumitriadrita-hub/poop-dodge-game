@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poop Dodge Game 💩</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Name Input Screen -->
+    <div id="nameScreen" class="screen">
+        <div class="container">
+            <h1>💩 POOP DODGE 💩</h1>
+            <div class="name-input">
+                <label for="playerName">ENTER YOUR NAME:</label>
+                <input type="text" id="playerName" placeholder="Your Name" maxlength="15">
+                <button id="continueBtn" class="btn">CONTINUE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Menu -->
+    <div id="menuScreen" class="screen hidden">
+        <div class="container">
+            <h1>💩 POOP DODGE 💩</h1>
+            <p class="subtitle">DON'T GET HIT BY POOP</p>
+            <div class="menu-buttons">
+                <button id="playBtn" class="btn menu-btn">START GAME</button>
+                <button id="howToPlayBtn" class="btn menu-btn">HOW TO PLAY</button>
+                <button id="leaderboardBtn" class="btn menu-btn">LEADERBOARD</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Play Screen -->
+    <div id="howToPlayScreen" class="screen hidden">
+        <div class="container">
+            <button class="back-btn" onclick="showMenu()">← MENU</button>
+            <h1>💩 HOW TO PLAY 💩</h1>
+            <div class="instructions">
+                <ul>
+                    <li>Dodge the poop falling from the sky!</li>
+                    <li>Catch the power-ups!
+                        <ul>
+                            <li>💖 = Extra Life</li>
+                            <li>🛡️ = Shield (protects from poop)</li>
+                            <li>💨 = Slow Motion (slows down poop)</li>
+                        </ul>
+                    </li>
+                    <li>You have 3 lives. Poop hits you = you DIE!</li>
+                    <li>Use left and right arrow keys to move!</li>
+                </ul>
+                <p class="master-text">BECOME THE POOP-DODGE-MASTER!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaderboard Screen -->
+    <div id="leaderboardScreen" class="screen hidden">
+        <div class="container">
+            <button class="back-btn" onclick="showMenu()">← MENU</button>
+            <h1>🏆 POOP-MASTERS 🏆</h1>
+            <div id="leaderboard" class="leaderboard">
+                <!-- Leaderboard will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen hidden">
+        <button class="back-btn" onclick="showMenu()">← MENU</button>
+        <div class="game-header">
+
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="screen hidden">
+        <div class="container">
+            <h1>GAME OVER! 💩</h1>
+            <p>Your Score: <span id="finalScore">0</span></p>
+            <button id="restartBtn" class="btn">PLAY AGAIN</button>
+            <button id="menuBtn" class="btn">MAIN MENU</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
